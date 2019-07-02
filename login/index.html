@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+    <style>
+      body {
+        background: #f1f1f1;
+        height: 100%;
+      }
+
+      body > .container {
+        margin-top: 30px !important;
+      }
+
+      .redBorder {
+        border: 1px solid red !important;
+      }
+      .greenText {
+        color: green !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="ui raised very padded text container segment">
+      <h1 class="ui header greenText redBorder" id="eva">Login example</h1>
+      <form
+        class="ui form redBorder greenText"
+        method="POST"
+        action="http://httpbin.org/post"
+      >
+        <div class="field">
+          <label>First Name</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            placeholder="First Name"
+          />
+        </div>
+        <div class="field">
+          <label>Last Name</label>
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            placeholder="Last Name"
+          />
+        </div>
+        <div class="field">
+          <div class="ui checkbox">
+            <input type="checkbox" name="agree" value="true" checked="true" />
+            <label for="agree">
+              I agree to the Terms and Conditions
+            </label>
+          </div>
+        </div>
+        <button class="ui button" type="submit">Submit</button>
+        or <a href="/">go back</a>
+      </form>
+    </div>
+  </body>
+</html>
+
+<!-- browser-sync start --server --files "*.*" -->
